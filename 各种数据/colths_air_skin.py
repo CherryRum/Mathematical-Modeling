@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+plt.rcParams['font.sans-serif'] = ['SimHei']
+fig = plt.figure()
+plt.xlim(0, 2)
+ax = fig.add_subplot(1, 1, 1)
+rect = plt.Rectangle((0.1,0.1),0.07,0.8,label='I层',color='slategrey')
+rect_2 = plt.Rectangle((0.15,0.1),0.2,0.8,label='II层',color='lightsteelblue')
+rect_3 = plt.Rectangle((0.35,0.1),0.1,0.8,label='III层',color='royalblue')
+rect_4 = plt.Rectangle((0.45,0.1),0.10,0.8,label='IV层',color='tan')
+rect_5 = plt.Rectangle((0.55,0.1),0.3,0.8,label = '皮肤',color='tomato')
+ax.add_patch(rect)
+ax.add_patch(rect_2)
+ax.add_patch(rect_3)
+ax.add_patch(rect_4)
+ax.add_patch(rect_5)
+legend = plt.legend(handles=[rect,rect_2,rect_3,rect_4,rect_5])
+plt.show()
